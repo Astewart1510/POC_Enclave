@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/root/sgx/samplecode/hello-rust_2/app/target/release/build/typenum-eb868a93bb726f1e/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/root/sgx/samplecode/hello-rust_2/app/target/release/build/typenum-eb868a93bb726f1e/out/op.rs
