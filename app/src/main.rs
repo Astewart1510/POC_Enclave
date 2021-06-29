@@ -16,20 +16,13 @@
 // under the License..
 #![feature(unsafe_cell_get_mut)]
 #![feature(proc_macro_hygiene, decl_macro)]
+#[warn(unused_must_use)]
 
 #[macro_use] extern crate rocket;
 #[macro_use] extern crate rocket_contrib;
 #[macro_use] extern crate serde_derive;
 extern crate serde;
 extern crate serde_json;
-
-
-
-// extern crate sgx_types;
-// extern crate sgx_urts;
-// extern crate hex;
-// extern crate bincode;
-//extern crate sgx_tstd as std;
 
 use rocket::State;
 use rocket_contrib::json::JsonValue;
