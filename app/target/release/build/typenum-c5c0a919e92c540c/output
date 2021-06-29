@@ -1,2 +1,0 @@
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=/root/sgx/samplecode/hello-POC_FINAL/app/target/release/build/typenum-c5c0a919e92c540c/out/consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=/root/sgx/samplecode/hello-POC_FINAL/app/target/release/build/typenum-c5c0a919e92c540c/out/op.rs

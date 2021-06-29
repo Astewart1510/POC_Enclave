@@ -4,18 +4,11 @@
 name = "Helloworldsampleenclave"
 version = "1.0.0"
 dependencies = [
- "lazy_static",
  "serde",
  "serde_cbor",
  "serde_derive",
  "serde_json",
- "sgx_rand",
- "sgx_tcrypto",
- "sgx_tcrypto_helper",
- "sgx_tkey_exchange",
- "sgx_tprotected_fs",
- "sgx_trts",
- "sgx_tse",
+ "sgx_tse 1.1.3 (git+https://github.com/apache/teaclave-sgx-sdk.git?rev=v1.1.3)",
  "sgx_tseal",
  "sgx_tstd",
  "sgx_types",
@@ -28,12 +21,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e3c69b077ad434294d3ce9f1f6143a2a4b89a8a2d54ef813d85003a4fd1137fd"
 
 [[package]]
-name = "either"
-version = "1.6.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e78d4f1cc4ae33bbfc157ed5d5a5ef3bc29227303d595861deb238fcec4e9457"
-
-[[package]]
 name = "half"
 version = "1.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -44,29 +31,11 @@ name = "hashbrown_tstd"
 version = "0.9.0"
 
 [[package]]
-name = "itertools"
-version = "0.10.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "37d572918e350e82412fe766d24b15e6682fb2ed2bbe018280caa810397cb319"
-dependencies = [
- "either",
-]
-
-[[package]]
 name = "itoa"
 version = "0.4.5"
 source = "git+https://github.com/mesalock-linux/itoa-sgx#295ee451f5ec74f25c299552b481beb445ea3eb7"
 dependencies = [
  "sgx_tstd",
-]
-
-[[package]]
-name = "lazy_static"
-version = "1.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
-dependencies = [
- "spin",
 ]
 
 [[package]]
@@ -99,15 +68,6 @@ version = "1.0.118"
 source = "git+https://github.com/mesalock-linux/serde-sgx#db0226f1d5d70fca6b96af2c285851502204e21c"
 dependencies = [
  "sgx_tstd",
-]
-
-[[package]]
-name = "serde-big-array"
-version = "0.3.0"
-source = "git+https://github.com/mesalock-linux/serde-big-array-sgx#94122c5167aee38b39b09a620a60db2c28cf7428"
-dependencies = [
- "serde",
- "serde_derive",
 ]
 
 [[package]]
@@ -159,19 +119,6 @@ name = "sgx_build_helper"
 version = "0.1.3"
 
 [[package]]
-name = "sgx_crypto_helper"
-version = "1.1.3"
-dependencies = [
- "itertools",
- "serde",
- "serde-big-array",
- "serde_derive",
- "sgx_tcrypto",
- "sgx_tstd",
- "sgx_types",
-]
-
-[[package]]
 name = "sgx_demangle"
 version = "1.1.3"
 
@@ -183,30 +130,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "sgx_rand"
-version = "1.1.3"
-dependencies = [
- "sgx_trts",
- "sgx_tstd",
- "sgx_types",
-]
-
-[[package]]
 name = "sgx_tcrypto"
-version = "1.1.3"
-dependencies = [
- "sgx_types",
-]
-
-[[package]]
-name = "sgx_tcrypto_helper"
-version = "1.1.3"
-dependencies = [
- "sgx_crypto_helper",
-]
-
-[[package]]
-name = "sgx_tkey_exchange"
 version = "1.1.3"
 dependencies = [
  "sgx_types",
@@ -236,12 +160,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "sgx_tse"
+version = "1.1.3"
+source = "git+https://github.com/apache/teaclave-sgx-sdk.git?rev=v1.1.3#a6a172e652b4db4eaa17e4faa078fda8922abdd0"
+dependencies = [
+ "sgx_types",
+]
+
+[[package]]
 name = "sgx_tseal"
 version = "1.1.3"
 dependencies = [
  "sgx_tcrypto",
  "sgx_trts",
- "sgx_tse",
+ "sgx_tse 1.1.3",
  "sgx_types",
 ]
 
@@ -272,12 +204,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "spin"
-version = "0.5.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6e63cff320ae2c57904679ba7cb63280a3dc4613885beafb148ee7bf9aa9042d"
-
-[[package]]
 name = "syn"
 version = "1.0.60"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -293,39 +219,3 @@ name = "unicode-xid"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f7fe0bb3479651439c9112f72b6c505038574c9fbb575ed1bf3b797fa39dd564"
-
-[[patch.unused]]
-name = "sgx_cov"
-version = "1.1.3"
-
-[[patch.unused]]
-name = "sgx_rand_derive"
-version = "1.1.3"
-
-[[patch.unused]]
-name = "sgx_serialize"
-version = "1.1.3"
-
-[[patch.unused]]
-name = "sgx_serialize_derive"
-version = "1.1.3"
-
-[[patch.unused]]
-name = "sgx_serialize_derive_internals"
-version = "1.1.3"
-
-[[patch.unused]]
-name = "sgx_tdh"
-version = "1.1.3"
-
-[[patch.unused]]
-name = "sgx_tunittest"
-version = "1.1.3"
-
-[[patch.unused]]
-name = "sgx_ucrypto"
-version = "1.1.3"
-
-[[patch.unused]]
-name = "sgx_urts"
-version = "1.1.3"

@@ -437,7 +437,7 @@ Copyright (C) 2012 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/root/sgx/samplecode/hello-rust/enclave/target/release/build/sgx_unwind-ad06e9e901ac54a1/out/libunwind'
+ac_pwd='/root/sgx/samplecode/POC_copy_2/enclave/target/release/build/sgx_unwind-ad06e9e901ac54a1/out/libunwind'
 srcdir='/root/sgx/sgx_unwind/../sgx_unwind/libunwind'
 INSTALL='/usr/bin/install -c'
 MKDIR_P='/bin/mkdir -p'

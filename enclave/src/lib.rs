@@ -27,8 +27,6 @@ extern crate serde_derive;
 extern crate sgx_types;
 extern crate sgx_tseal;
 extern crate serde_cbor;
-extern crate sgx_crypto_helper;
-extern crate sgx_tcrypto;
 extern crate serde_json;
 
 use sgx_types::*;

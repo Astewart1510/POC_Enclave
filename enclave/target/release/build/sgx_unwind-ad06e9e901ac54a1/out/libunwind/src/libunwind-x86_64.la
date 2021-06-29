@@ -17,7 +17,7 @@ old_library='libunwind-x86_64.a'
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' /root/sgx/samplecode/hello-rust/enclave/target/release/build/sgx_unwind-ad06e9e901ac54a1/out/libunwind/src/libunwind.la -lgcc -lc'
+dependency_libs=' /root/sgx/samplecode/POC_copy_2/enclave/target/release/build/sgx_unwind-ad06e9e901ac54a1/out/libunwind/src/libunwind.la -lgcc -lc'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

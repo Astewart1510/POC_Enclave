@@ -6,7 +6,6 @@ version = 3
 name = "app"
 version = "1.0.0"
 dependencies = [
- "base64",
  "bincode",
  "figment 0.9.4",
  "hex",
@@ -17,10 +16,7 @@ dependencies = [
  "serde_bytes",
  "serde_derive",
  "serde_json",
- "sgx_crypto_helper",
- "sgx_tse",
- "sgx_tstd",
- "sgx_types 1.1.3",
+ "sgx_types",
  "sgx_urts",
 ]
 
@@ -399,11 +395,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d7afe4a420e3fe79967a00898cc1f4db7c8a49a9333a29f8a4bd76a253d5cd04"
 
 [[package]]
-name = "hashbrown_tstd"
-version = "0.9.0"
-source = "git+https://github.com/baidu/rust-sgx-sdk.git#59e1b23354b2ca40c33d451a21dbedb6e28d47fd"
-
-[[package]]
 name = "hermit-abi"
 version = "0.1.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -500,15 +491,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "61124eeebbd69b8190558df225adf7e4caafce0d743919e5d6b19652314ec5ec"
 dependencies = [
  "cfg-if 1.0.0",
-]
-
-[[package]]
-name = "itertools"
-version = "0.10.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "37d572918e350e82412fe766d24b15e6682fb2ed2bbe018280caa810397cb319"
-dependencies = [
- "either",
 ]
 
 [[package]]
@@ -781,7 +763,7 @@ checksum = "0ef9e7e66b4468674bfcb0c81af8b7fa0bb154fa9f28eb840da5c447baeb8d7e"
 dependencies = [
  "libc",
  "rand_chacha",
- "rand_core 0.6.2",
+ "rand_core",
  "rand_hc",
 ]
 
@@ -792,23 +774,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e12735cf05c9e10bf21534da50a147b924d555dc7a547c42e6bb2d5b6017ae0d"
 dependencies = [
  "ppv-lite86",
- "rand_core 0.6.2",
+ "rand_core",
 ]
-
-[[package]]
-name = "rand_core"
-version = "0.3.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7a6fdeb83b075e8266dcc8762c22776f6877a63111121f5f8c7411e5be7eed4b"
-dependencies = [
- "rand_core 0.4.2",
-]
-
-[[package]]
-name = "rand_core"
-version = "0.4.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9c33a3c44ca05fa6f1807d8e6743f3824e8509beca625669633be0acbdf509dc"
 
 [[package]]
 name = "rand_core"
@@ -825,16 +792,7 @@ version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3190ef7066a446f2e7f42e239d161e905420ccab01eb967c9eb27d21b2322a73"
 dependencies = [
- "rand_core 0.6.2",
-]
-
-[[package]]
-name = "rdrand"
-version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5014f842b5515f60c15d3bca398477951f785883f73e7f9bc8a9d9c9bb6821c7"
-dependencies = [
- "rand_core 0.4.2",
+ "rand_core",
 ]
 
 [[package]]
@@ -1020,16 +978,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "serde-big-array"
-version = "0.1.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b926cfbabfe8011609dda0350cb24d884955d294909ac71c0db7027366c77e3e"
-dependencies = [
- "serde",
- "serde_derive",
-]
-
-[[package]]
 name = "serde-bytes-repr"
 version = "0.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1072,128 +1020,15 @@ dependencies = [
 ]
 
 [[package]]
-name = "sgx_alloc"
-version = "1.1.3"
-source = "git+https://github.com/baidu/rust-sgx-sdk.git#59e1b23354b2ca40c33d451a21dbedb6e28d47fd"
-
-[[package]]
-name = "sgx_backtrace_sys"
-version = "1.1.3"
-source = "git+https://github.com/baidu/rust-sgx-sdk.git#59e1b23354b2ca40c33d451a21dbedb6e28d47fd"
-dependencies = [
- "cc",
- "sgx_build_helper",
- "sgx_libc",
-]
-
-[[package]]
-name = "sgx_build_helper"
-version = "0.1.3"
-source = "git+https://github.com/baidu/rust-sgx-sdk.git#59e1b23354b2ca40c33d451a21dbedb6e28d47fd"
-
-[[package]]
-name = "sgx_crypto_helper"
-version = "1.1.3"
-source = "git+https://github.com/apache/teaclave-sgx-sdk.git?rev=v1.1.3#a6a172e652b4db4eaa17e4faa078fda8922abdd0"
-dependencies = [
- "itertools",
- "libc",
- "serde",
- "serde-big-array",
- "serde_derive",
- "sgx_types 1.1.3",
- "sgx_ucrypto",
-]
-
-[[package]]
-name = "sgx_demangle"
-version = "1.1.3"
-source = "git+https://github.com/baidu/rust-sgx-sdk.git#59e1b23354b2ca40c33d451a21dbedb6e28d47fd"
-
-[[package]]
-name = "sgx_libc"
-version = "1.1.3"
-source = "git+https://github.com/baidu/rust-sgx-sdk.git#59e1b23354b2ca40c33d451a21dbedb6e28d47fd"
-dependencies = [
- "sgx_types 1.1.3 (git+https://github.com/baidu/rust-sgx-sdk.git)",
-]
-
-[[package]]
-name = "sgx_tprotected_fs"
-version = "1.1.3"
-source = "git+https://github.com/baidu/rust-sgx-sdk.git#59e1b23354b2ca40c33d451a21dbedb6e28d47fd"
-dependencies = [
- "sgx_trts",
- "sgx_types 1.1.3 (git+https://github.com/baidu/rust-sgx-sdk.git)",
-]
-
-[[package]]
-name = "sgx_trts"
-version = "1.1.3"
-source = "git+https://github.com/baidu/rust-sgx-sdk.git#59e1b23354b2ca40c33d451a21dbedb6e28d47fd"
-dependencies = [
- "sgx_libc",
- "sgx_types 1.1.3 (git+https://github.com/baidu/rust-sgx-sdk.git)",
-]
-
-[[package]]
-name = "sgx_tse"
-version = "1.1.3"
-source = "git+https://github.com/apache/teaclave-sgx-sdk.git?rev=v1.1.3#a6a172e652b4db4eaa17e4faa078fda8922abdd0"
-dependencies = [
- "sgx_types 1.1.3",
-]
-
-[[package]]
-name = "sgx_tstd"
-version = "1.1.3"
-source = "git+https://github.com/baidu/rust-sgx-sdk.git#59e1b23354b2ca40c33d451a21dbedb6e28d47fd"
-dependencies = [
- "hashbrown_tstd",
- "sgx_alloc",
- "sgx_backtrace_sys",
- "sgx_demangle",
- "sgx_libc",
- "sgx_tprotected_fs",
- "sgx_trts",
- "sgx_types 1.1.3 (git+https://github.com/baidu/rust-sgx-sdk.git)",
- "sgx_unwind",
-]
-
-[[package]]
 name = "sgx_types"
 version = "1.1.3"
-
-[[package]]
-name = "sgx_types"
-version = "1.1.3"
-source = "git+https://github.com/baidu/rust-sgx-sdk.git#59e1b23354b2ca40c33d451a21dbedb6e28d47fd"
-
-[[package]]
-name = "sgx_ucrypto"
-version = "1.1.3"
-source = "git+https://github.com/apache/teaclave-sgx-sdk.git?rev=v1.1.3#a6a172e652b4db4eaa17e4faa078fda8922abdd0"
-dependencies = [
- "libc",
- "rand_core 0.3.1",
- "rdrand",
- "sgx_types 1.1.3",
-]
-
-[[package]]
-name = "sgx_unwind"
-version = "0.1.1"
-source = "git+https://github.com/baidu/rust-sgx-sdk.git#59e1b23354b2ca40c33d451a21dbedb6e28d47fd"
-dependencies = [
- "sgx_build_helper",
-]
 
 [[package]]
 name = "sgx_urts"
 version = "1.1.3"
 dependencies = [
  "libc",
- "sgx_types 1.1.3",
+ "sgx_types",
 ]
 
 [[package]]
@@ -1600,11 +1435,3 @@ name = "yansi"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9fc79f4a1e39857fc00c3f662cbf2651c771f00e9c15fe2abc341806bd46bd71"
-
-[[patch.unused]]
-name = "sgx_alloc"
-version = "1.1.3"
-
-[[patch.unused]]
-name = "sgx_tstd"
-version = "1.1.3"
