@@ -1,2 +1,0 @@
-cargo:rustc-link-search=native=/opt/sgxsdk/lib64
-cargo:rustc-link-lib=static=sgx_tcrypto
