@@ -70,16 +70,7 @@ flycheck_*.el
 # network security
 /network-security.data
 
-### SGX ###
-Enclave_u.c
-Enclave_u.h
-Enclave_t.c
-Enclave_t.h
-bin/
-lib/
 
- Prerequisites
-*.d
 
 # Compiled Object files
 *.slo
