@@ -6,7 +6,7 @@ This installation details the local installation, setup and running of the encla
 
 # Setup and Install
 
-This setup was done on a Macbook Pro 2015. For Windows, the instructions should be similar and the issues with the enclave will be solved the same, however please see windows documentation for VS Code and Docker setup and terminal syntax. To run this enclave I would suggest using VS Code and Docker. To run out of a docker container so please make sure you have the latest Docker installed on your laptop. For instructions please visit the docker homepage - https://docs.docker.com/docker-for-mac/install/. Once docker is installed and VS code is open with the docker extension installed and enabled, please follow the instructions below. 
+This setup was done on a Macbook Pro 2015. For Windows, the instructions should be similar and the issues with the enclave will be solved the same, however please see windows documentation for VS Code and Docker setup and terminal syntax. To run this enclave I would suggest using VS Code and Docker. To run out of a docker container please make sure you have the latest Docker installed on your laptop. For instructions please visit the docker homepage - https://docs.docker.com/docker-for-mac/install/. Once docker is installed and VS code is open with the docker extension installed and enabled, please follow the instructions below. 
 
 1. Clone or download this repo.
 2. Go to https://github.com/apache/incubator-teaclave-sgx-sdk#use-simulation-mode-for-non-sgx-enabled-machine-includes-macos and follow the installation steps provided by this section OR to summarise, after you have cloned and downloaded the entire incubator-teaclave-sgx-sdk repo your actions should be as follows:
