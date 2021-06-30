@@ -2,7 +2,7 @@
 
 Credit must go to https://github.com/apache/incubator-teaclave-sgx-sdk from which this repo was forked. It is based off the Rust Intel SGX SDK. 
 
-This installation details the installation, setup and running of the enclave part of my Thesis POC locally. You can find the nodejs server and web app with installation insutrctions here - https://github.com/Astewart1510/WebApp_POC. 
+This installation details the local installation, setup and running of the enclave part of my University Masters Thesis Proof of Concept. There are two parts to my thesis as a whole and you can find the second part, a nodejs server and web app with installation insutrctions here - https://github.com/Astewart1510/WebApp_POC. 
 
 # Setup and Install
 
