@@ -13,7 +13,9 @@ To run this enclave I would suggest using VS Code and Docker. To run out of a do
     *  Navigate to the samplecode folder (eg. `cd downloads/incubator-teaclave-sgx-sdk-master/samplecode/`) and copy the POC_Enclave repo into the samplecode folder.
     * Download the sgx docker image - `docker pull baiduxlab/sgx-rust`
     * Run the docker image with the incubator-teaclave-sgx-sdk-master repo -  `docker run -v /your/path/to/rust-sgx:/root/sgx -ti baiduxlab/sgx-rust`
-    * Open visual studio code and you should see a running docker container under the docker tab - [![Screenshot-2021-06-30-at-17-14-15.png](https://i.postimg.cc/v86f5zmh/Screenshot-2021-06-30-at-17-14-15.png)](https://postimg.cc/t7psjFWn)
+    * Open visual studio code and you should see a running docker container under the docker tab - 
+    [![Screenshot-2021-06-30-at-17-14-15.png](https://i.postimg.cc/SQWjytsB/Screenshot-2021-06-30-at-17-14-15.png)](https://postimg.cc/NLjQDDRD)
+    [![Screenshot-2021-06-30-at-17-14-15.png](https://i.postimg.cc/v86f5zmh/Screenshot-2021-06-30-at-17-14-15.png)](https://postimg.cc/t7psjFWn)
 3. Check that you are able to run the samplecode/helloworld app from within Step 1. If successful then close the docker container and clone this repo and and copy the files into the samplecode folder contained within the Rust Intel SGX SDK cloned repo from Step 1. The path should be incubator-teaclave-sgx-sdk/samplecode/Enclave_POC. 
 4. Run the docker image exactly like in Step 1 except instead of running the helloworld app run the Enclave_POC app. 
 5. The app should initiate a server on our local machine at the address `http://localhost:9000` running off the rocket framework. 
