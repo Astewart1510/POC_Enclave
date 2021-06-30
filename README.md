@@ -2,9 +2,9 @@
 
 Credit must go to https://github.com/apache/incubator-teaclave-sgx-sdk from which this repo was forked. It is based off the Rust Intel SGX SDK. 
 
-# Setup and Install
+This installation details the installation, setup and running of the enclave part of my Thesis POC locally. You can find the nodejs server and web app with installation insutrctions here - https://github.com/Astewart1510/WebApp_POC. 
 
-This installation is to run the enclave part of my Thesis POC locally. You can find the nodejs server and web app with installation insutrctions here - https://github.com/Astewart1510/WebApp_POC. 
+# Setup and Install
 
 This setup was done on a Macbook Pro 2015. For Windows, the instructions should be similar and the issues with the enclave will be solved the same, however please see windows documentation for VS Code and Docker setup and terminal syntax. To run this enclave I would suggest using VS Code and Docker. To run out of a docker container so please make sure you have the latest Docker installed on your laptop. For instructions please visit the docker homepage - https://docs.docker.com/docker-for-mac/install/. Once docker is installed and VS code is open with the docker extension installed and enabled, please follow the instructions below. 
 
