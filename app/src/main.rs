@@ -110,7 +110,7 @@ async fn main() {
     let enclave = match init_enclave() {
         Ok(r) => {
             println!("[+] Init Enclave Successful - this is the enclaves ID {}!", r.geteid());
-            println!("[+] The enclave is also listening for a GET request on local port 8000!");
+            println!("[+] The enclave is also listening for a GET request on local port 9000!");
             println!("[+] When a get request is pinged it will execute the sealing data process...");
             r
         },
